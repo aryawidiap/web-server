@@ -8,7 +8,16 @@ public class ReadFile {
 	private boolean fileExist;
 	private String requestedFile;
 	private String content;
+	private String dir;
 	
+	public String getDir() {
+		return dir;
+	}
+
+	public void setDir(String dir) {
+		this.dir = dir;
+	}
+
 	public String getContent() {
 		return content;
 	}
@@ -29,7 +38,7 @@ public class ReadFile {
 	// Ref: w3schools.com
 	public void retrieveFile(){
 		try {
-		      File myObj = new File(requestedFile);
+		      File myObj = new File(dir + requestedFile);
 		      Scanner myReader = new Scanner(myObj);
 		      String contentBuf = "";
 		      while (myReader.hasNextLine()) {
@@ -48,6 +57,7 @@ public class ReadFile {
 	public ReadFile() {
 		fileExist = false;
 		content = null;
+		dir = "";
 	}
 
 	public String getRequestedFile() {

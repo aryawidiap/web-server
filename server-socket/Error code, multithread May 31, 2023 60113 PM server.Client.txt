@@ -1,0 +1,10 @@
+May 31, 2023 6:01:13 PM server.ClientThread run
+SEVERE: null
+java.lang.NullPointerException: Cannot invoke "String.equals(Object)" because "buf" is null
+	at server.ClientThread.run(ClientThread.java:45)
+
+[403.109s][warning][os,thread] Failed to start thread - _beginthreadex failed (EACCES) for attributes: stacksize: default, flags: CREATE_SUSPENDED STACK_SIZE_PARAM_IS.
+Exception in thread "main" java.lang.OutOfMemoryError: unable to create native thread: possibly out of memory or process/resource limits reached
+	at java.base/java.lang.Thread.start0(Native Method)
+	at java.base/java.lang.Thread.start(Thread.java:800)
+	at server.StreamTest.main(StreamTest.java:63)
